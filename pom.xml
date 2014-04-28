@@ -31,13 +31,13 @@
   <artifactId>pdfexport-collection-application</artifactId>
   <name>PDF Export Collection Application</name>
   <packaging>xar</packaging>
-  <version>1.0</version>
+  <version>1.1-SNAPSHOT</version>
   <description>Application allowing to create and manage collections in order to export them to PDF.</description>
   <scm>
     <connection>scm:git:git://github.com:xwiki-contrib/pdfexport-collection-application.git</connection>
     <developerConnection>scm:git:git@github.com:xwiki-contrib/pdfexport-collection-application.git</developerConnection>
     <url>https://github.com/xwiki-contrib/pdfexport-collection-application</url>
-    <tag>pdfexport-collection-application-1.0</tag>
+    <tag>HEAD</tag>
   </scm>
   <developers>
     <developer>
