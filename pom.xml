@@ -52,7 +52,21 @@
       <url>http://nexus.xwiki.org/nexus/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
-  <!-- Skip the enforcer plugin here, for now, we'll upgrade this code later -->  
+  <dependencies>
+     <dependency>
+      <groupId>org.xwiki.contrib</groupId>
+      <artifactId>xwiki-macro-hierarchy</artifactId>
+      <version>1.2</version>
+      <type>xar</type>
+      <scope>runtime</scope>
+    </dependency>
+     <dependency>
+      <groupId>org.xwiki.contrib</groupId>
+      <artifactId>xwiki-multipagepdfexport</artifactId>
+      <version>1.1</version>
+      <scope>runtime</scope>
+    </dependency>
+  </dependencies>
   <build>
     <pluginManagement>
       <plugins>
