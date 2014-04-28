@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xwikidoc>
+<web>Collections</web>
+<name>ExportColection</name>
+<language></language>
+<defaultLanguage>en</defaultLanguage>
+<translation>0</translation>
+<parent>Collections.WebHome</parent>
+<creator>XWiki.Admin</creator>
+<author>XWiki.Admin</author>
+<customClass></customClass>
+<contentAuthor>XWiki.Admin</contentAuthor>
+<creationDate>1397038409000</creationDate>
+<date>1398704152000</date>
+<contentUpdateDate>1398704152000</contentUpdateDate>
+<version>6.1</version>
+<title>ExportColection</title>
+<template></template>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment>Imported from XAR</comment>
+<minorEdit>false</minorEdit>
+<syntaxId>xwiki/2.1</syntaxId>
+<hidden>false</hidden>
+<object>
+<class>
+<name>XWiki.JavaScriptExtension</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<cache>
+<cache>0</cache>
+<disabled>0</disabled>
+<displayType>select</displayType>
+<multiSelect>0</multiSelect>
+<name>cache</name>
+<number>5</number>
+<prettyName>Caching policy</prettyName>
+<relationalStorage>0</relationalStorage>
+<separator> </separator>
+<separators> ,|</separators>
+<size>1</size>
+<unmodifiable>0</unmodifiable>
+<values>long|short|default|forbid</values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</cache>
+<code>
+<disabled>0</disabled>
+<name>code</name>
+<number>2</number>
+<prettyName>Code</prettyName>
+<rows>20</rows>
+<size>50</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+</code>
+<name>
+<disabled>0</disabled>
+<name>name</name>
+<number>1</number>
+<prettyName>Name</prettyName>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</name>
+<parse>
+<disabled>0</disabled>
+<displayFormType>select</displayFormType>
+<displayType>yesno</displayType>
+<name>parse</name>
+<number>4</number>
+<prettyName>Parse content</prettyName>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+</parse>
+<use>
+<cache>0</cache>
+<disabled>0</disabled>
+<displayType>select</displayType>
+<multiSelect>0</multiSelect>
+<name>use</name>
+<number>3</number>
+<prettyName>Use this extension</prettyName>
+<relationalStorage>0</relationalStorage>
+<separator> </separator>
+<separators> ,|</separators>
+<size>1</size>
+<unmodifiable>0</unmodifiable>
+<values>currentPage=Always on this page|onDemand=On demand|always=Always on this wiki</values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</use>
+</class>
+<name>Collections.ExportColection</name>
+<number>0</number>
+<className>XWiki.JavaScriptExtension</className>
+<guid>ba83ef07-ee91-4368-9174-ed9d24c901bc</guid>
+<property>
+<cache>short</cache>
+</property>
+<property>
+<code>document.observe("xwiki:dom:loaded", function(){
+  var cancelButton = $$('.cancelButton');
+  cancelButton[0].observe('click', function(){
+    window.location.href = "$xwiki.getURL('Collections.WebHome')";
+  });
+});</code>
+</property>
+<property>
+<name></name>
+</property>
+<property>
+<parse>1</parse>
+</property>
+<property>
+<use>currentPage</use>
+</property>
+</object>
+<object>
+<class>
+<name>XWiki.StyleSheetExtension</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<cache>
+<cache>0</cache>
+<disabled>0</disabled>
+<displayType>select</displayType>
+<multiSelect>0</multiSelect>
+<name>cache</name>
+<number>5</number>
+<prettyName>Caching policy</prettyName>
+<relationalStorage>0</relationalStorage>
+<separator> </separator>
+<separators> ,|</separators>
+<size>1</size>
+<unmodifiable>0</unmodifiable>
+<values>long|short|default|forbid</values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</cache>
+<code>
+<disabled>0</disabled>
+<name>code</name>
+<number>2</number>
+<prettyName>Code</prettyName>
+<rows>20</rows>
+<size>50</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+</code>
+<name>
+<disabled>0</disabled>
+<name>name</name>
+<number>1</number>
+<prettyName>Name</prettyName>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</name>
+<parse>
+<disabled>0</disabled>
+<displayFormType>select</displayFormType>
+<displayType>yesno</displayType>
+<name>parse</name>
+<number>4</number>
+<prettyName>Parse content</prettyName>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+</parse>
+<use>
+<cache>0</cache>
+<disabled>0</disabled>
+<displayType>select</displayType>
+<multiSelect>0</multiSelect>
+<name>use</name>
+<number>3</number>
+<prettyName>Use this extension</prettyName>
+<relationalStorage>0</relationalStorage>
+<separator> </separator>
+<separators> ,|</separators>
+<size>1</size>
+<unmodifiable>0</unmodifiable>
+<values>currentPage=Always on this page|onDemand=On demand|always=Always on this wiki</values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</use>
+</class>
+<name>Collections.ExportColection</name>
+<number>0</number>
+<className>XWiki.StyleSheetExtension</className>
+<guid>0e8f85ee-ee12-48a2-86ec-4a8641b9ab5b</guid>
+<property>
+<cache>long</cache>
+</property>
+<property>
+<code>#pdftemplate, #exportName {
+  width:30%;
+}</code>
+</property>
+<property>
+<name></name>
+</property>
+<property>
+<parse></parse>
+</property>
+<property>
+<use>currentPage</use>
+</property>
+</object>
+<content>{{velocity}}
+#set($query = "select doc.fullName, doc.name from XWikiDocument as doc, BaseObject as obj where doc.fullName = obj.name and obj.className = 'XWiki.PDFClass'")
+#set($results = $services.query.hql($query).execute())
+{{html}}
+&lt;form action="" class="xform" method="get" name="form_export"&gt;
+    &lt;dl&gt;
+      &lt;dt&gt;
+        &lt;label for="pdftemplate"&gt;$msg.get('Collections.exportPage.templateSelectorLabel')&lt;/label&gt;
+      &lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;select id="pdftemplate" name="pdftemplate"&gt;
+           &lt;option value=""&gt;$msg.get('Collections.exportPage.notemplate')&lt;/option&gt;
+         #foreach($result in $results)
+           &lt;option value="$result[0]"&gt;$result[1]&lt;/option&gt;
+         #end
+        &lt;/select&gt;
+      &lt;/dd&gt;
+      &lt;dt&gt;
+        &lt;label for="exportName"&gt;$msg.get('Collections.exportPage.exportLabel')&lt;/label&gt;
+      &lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;input id="exportName" name="exportName" type="text" size="60" value=""/&gt;
+      &lt;/dd&gt;
+      &lt;dt&gt;
+      &lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;input type="checkbox" name="recto" value="true"&gt;$msg.get('Collections.exportPage.recto')&lt;/input&gt;
+      &lt;/dd&gt;
+       &lt;dt&gt;
+       &lt;/dt&gt;
+       &lt;dd&gt;
+         &lt;input type="checkbox" name="pdfcover"  checked="checked" value="1"&gt;$msg.get('Collections.exportPage.cover')&lt;/input&gt;
+         &lt;input type="hidden" name="pdfcover" value="0" /&gt;
+       &lt;/dd&gt;
+       &lt;dt&gt;
+       &lt;dd&gt;
+         &lt;input type="checkbox" name="pdftoc"  checked="checked" value="1"&gt;$msg.get('Collections.exportPage.toc')&lt;/input&gt;
+         &lt;input type="hidden" name="pdftoc" value="0" /&gt;
+       &lt;/dd&gt;
+       &lt;/dt&gt;
+    &lt;/dl&gt;
+        &lt;input type="hidden" name="exportListDoc" value="$request.exportListDoc" /&gt;
+    &lt;p&gt;
+      &lt;span class="buttonwrapper"&gt;
+        &lt;input class="button" type="submit" value="$msg.get('Collections.exportPage.export')"/&gt;
+      &lt;/span&gt;
+      &lt;span class="buttonwrapper"&gt;
+        &lt;input class="button cancelButton" type="reset" value="$msg.get('Collections.exportPage.cancel')"/&gt;
+      &lt;/span&gt;
+    &lt;/p&gt;
+&lt;/form&gt;
+{{/html}}
+
+#if("$!request.exportName"!="")
+  #set($exportName = $request.exportName)
+  #if("$!request.recto"=="true")
+    #set($recto = true)
+  #else
+    #set($recto = false)
+  #end
+  #set($exportListDoc = $xwiki.getDocument("$request.exportListDoc"))
+  #set($listObj = $exportListDoc.getObject('Collections.StaticCollectionClass'))
+  #set($exportList = $listObj.getProperty('pages').value)
+  #set($docsToExport = [])
+  #foreach($item in $exportList)
+    #set($discard = $docsToExport.add("$item"))
+  #end
+  #set($url = $services.pdfexporter.export("$exportName",$docsToExport, $recto))
+#end
+{{/velocity}}</content></xwikidoc>

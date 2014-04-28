@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xwikidoc>
+<web>Collections</web>
+<name>Translations</name>
+<language></language>
+<defaultLanguage>en</defaultLanguage>
+<translation>0</translation>
+<parent>Collections.test5</parent>
+<creator>XWiki.Admin</creator>
+<author>XWiki.Admin</author>
+<customClass></customClass>
+<contentAuthor>XWiki.Admin</contentAuthor>
+<creationDate>1396009909000</creationDate>
+<date>1398704152000</date>
+<contentUpdateDate>1398704152000</contentUpdateDate>
+<version>4.1</version>
+<title>Translations</title>
+<template></template>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment>Imported from XAR</comment>
+<minorEdit>false</minorEdit>
+<syntaxId>xwiki/2.1</syntaxId>
+<hidden>false</hidden>
+<content>collections.viewCollection.exportButton=export
+collections.viewCollection.editButton=edit
+collections.viewCollection.backButton=back
+collections.viewCollection.descriptionLabel=Description:
+collections.home.create.name=Create new collection
+collections.home.create.button=Create
+collections.livetable.doc.title=Title
+collections.livetable.description=Description
+collections.livetable.doc.creationDate=Date
+collections.livetable.doc.author=Author
+collections.livetable.collectionsExport=Export
+collections.livetable.collectionsEdit=Edit
+collections.livetable.collectionsOrder=Order
+collections.livetable._actions=Delete
+collections.home.error.documentExist=Document already exist
+Collections.exportPage.templateSelectorLabel=Select a PDF template
+Collections.exportPage.notemplate=Export without a PDF template
+Collections.exportPage.exportLabel=Name
+Collections.exportPage.recto=Start on odd page
+Collections.exportPage.export=Export
+Collections.exportPage.cancel=Cancel
+Collections.exportPage.cover=Cover
+Collections.exportPage.toc=Table of Contents
+Collections.create.title=Title
+Collections.create.description=Description
+Collections.editOrder.info=If you edit the parent child relation of elements to improve the element ordering, they will be saved. If you come back to edit the element ordering again, the ordering will fallback to it's original state concerning mother child relation.
+collections.livetable.emptyvalue=
+Collections.validation.noTitle=Title field is mandatory
+Collections.validation.listIsEmpty=You must select at least one document
+Collections.validation.noDescription=Description field is mandatory
+Collections.edit.addingNewElements=This list displays all documents that you can add at the end of the list.
+Collections.edit.currentList=This is the ordered list. You can uncheck a document to remove it from the list.
+Collections.warning.noParent=If you add a parent and one or more of its child, you will have to give attention to it/them during the reordering.
+</content></xwikidoc>

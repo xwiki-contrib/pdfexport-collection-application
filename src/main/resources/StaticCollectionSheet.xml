@@ -1,0 +1,291 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xwikidoc>
+<web>Collections</web>
+<name>StaticCollectionSheet</name>
+<language></language>
+<defaultLanguage>en</defaultLanguage>
+<translation>0</translation>
+<parent>Collections.WebHome</parent>
+<creator>XWiki.Admin</creator>
+<author>XWiki.Admin</author>
+<customClass></customClass>
+<contentAuthor>XWiki.Admin</contentAuthor>
+<creationDate>1395232527000</creationDate>
+<date>1398704152000</date>
+<contentUpdateDate>1398704152000</contentUpdateDate>
+<version>14.1</version>
+<title></title>
+<template></template>
+<defaultTemplate></defaultTemplate>
+<validationScript></validationScript>
+<comment>Imported from XAR</comment>
+<minorEdit>false</minorEdit>
+<syntaxId>xwiki/2.1</syntaxId>
+<hidden>false</hidden>
+<object>
+<class>
+<name>XWiki.StyleSheetExtension</name>
+<customClass></customClass>
+<customMapping></customMapping>
+<defaultViewSheet></defaultViewSheet>
+<defaultEditSheet></defaultEditSheet>
+<defaultWeb></defaultWeb>
+<nameField></nameField>
+<validationScript></validationScript>
+<cache>
+<cache>0</cache>
+<disabled>0</disabled>
+<displayType>select</displayType>
+<multiSelect>0</multiSelect>
+<name>cache</name>
+<number>5</number>
+<prettyName>Caching policy</prettyName>
+<relationalStorage>0</relationalStorage>
+<separator> </separator>
+<separators> ,|</separators>
+<size>1</size>
+<unmodifiable>0</unmodifiable>
+<values>long|short|default|forbid</values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</cache>
+<code>
+<disabled>0</disabled>
+<name>code</name>
+<number>2</number>
+<prettyName>Code</prettyName>
+<rows>20</rows>
+<size>50</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.TextAreaClass</classType>
+</code>
+<name>
+<disabled>0</disabled>
+<name>name</name>
+<number>1</number>
+<prettyName>Name</prettyName>
+<size>30</size>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.StringClass</classType>
+</name>
+<parse>
+<disabled>0</disabled>
+<displayFormType>select</displayFormType>
+<displayType>yesno</displayType>
+<name>parse</name>
+<number>4</number>
+<prettyName>Parse content</prettyName>
+<unmodifiable>0</unmodifiable>
+<classType>com.xpn.xwiki.objects.classes.BooleanClass</classType>
+</parse>
+<use>
+<cache>0</cache>
+<disabled>0</disabled>
+<displayType>select</displayType>
+<multiSelect>0</multiSelect>
+<name>use</name>
+<number>3</number>
+<prettyName>Use this extension</prettyName>
+<relationalStorage>0</relationalStorage>
+<separator> </separator>
+<separators> ,|</separators>
+<size>1</size>
+<unmodifiable>0</unmodifiable>
+<values>currentPage=Always on this page|onDemand=On demand|always=Always on this wiki</values>
+<classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+</use>
+</class>
+<name>Collections.StaticCollectionSheet</name>
+<number>0</number>
+<className>XWiki.StyleSheetExtension</className>
+<guid>d3c0d783-4f40-405d-a641-42a025df89b4</guid>
+<property>
+<cache>long</cache>
+</property>
+<property>
+<code>.hierarchymacrolist {
+  width:98%; 
+  height:500px; 
+  overflow-x:hidden;
+}
+#collectionButtons {
+  float:right;
+}
+#description {
+font-weight:bold;
+}
+.collectionsForm {
+  display:inline;
+}
+.xErrorField {
+  border: 1px solid #CC3333 !important;
+}
+.xErrorMsgNo {
+display:none;
+}
+.xErrorMsg {
+  color: #CC3333;
+  display: block;
+  font-size: .8em;
+  font-weight: normal;
+  margin-bottom: .3em;
+}
+.customList {
+  width:100%; 
+  height:300px; 
+  overflow-x:hidden;
+}</code>
+</property>
+<property>
+<name></name>
+</property>
+<property>
+<parse>0</parse>
+</property>
+<property>
+<use>onDemand</use>
+</property>
+</object>
+<content>{{velocity}}
+#if($doc.isNew()&amp;&amp;$context.action=="edit")
+  #set($discard = $xwiki.ssx.use("Collections.StaticCollectionSheet"))
+#macro(showvalidationmessage $message)
+  #if($context.validationStatus.errors.contains($message))
+    &lt;span class='xErrorMsg'&gt; $xwiki.parseMessage($message)&lt;/span&gt;
+  #end
+#end
+  {{html}}
+  ## Invoke validation
+  &lt;input type="hidden" name="xvalidate" value="1" /&gt;
+  ## Set the page, which Groovy script will be used for validation
+  &lt;input type="hidden" name="xvalidation" value="Collections.FormValidator" /&gt;
+  &lt;dl&gt;
+      &lt;dt&gt;
+        &lt;label for="page"&gt;$msg.get('Collections.create.title')&lt;/label&gt;
+      &lt;/dt&gt;
+      &lt;dd&gt;
+        #if($context.validationStatus.errors.contains('Collections.validation.noTitle'))
+          &lt;span class='xErrorMsg'&gt; $xwiki.parseMessage('Collections.validation.noTitle')&lt;/span&gt;
+          &lt;input id="title" type="text" class='xErrorField'  name="title"&gt;
+        #else
+          &lt;input id="title" type="text"  name="title"&gt;
+        #end
+      &lt;/dd&gt;
+      &lt;dt&gt;
+        &lt;label for="Collections.StaticCollectionClass_0_description"&gt;$msg.get('Collections.create.description')&lt;/label&gt;
+      &lt;/dt&gt;
+      &lt;dd&gt;
+        #if($context.validationStatus.errors.contains('Collections.validation.noDescription'))
+          &lt;span class='xErrorMsg'&gt; $xwiki.parseMessage('Collections.validation.noDescription')&lt;/span&gt;
+          &lt;textarea  id="Collections.StaticCollectionClass_0_description" class='xErrorField' cols="80" name="Collections.StaticCollectionClass_0_description" /&gt;
+        #else
+          &lt;textarea  id="Collections.StaticCollectionClass_0_description" cols="80" name="Collections.StaticCollectionClass_0_description" /&gt;
+        #end
+      &lt;/dd&gt;
+    &lt;/dl&gt;
+    #if($context.validationStatus.errors.contains('Collections.validation.listIsEmpty'))
+      &lt;span class='xErrorMsg'&gt; $xwiki.parseMessage('Collections.validation.listIsEmpty')&lt;/span&gt;
+    #end
+  {{/html}}
+
+  {{hierarchy displayvalue="displayTitle" showcheckboxes="true" excludespaces="XWiki" checkboxname ="Collections.StaticCollectionClass_0_pages"  /}}
+
+#elseif($context.action=="view")
+  #set($discard = $xwiki.ssx.use("Collections.StaticCollectionSheet"))
+  #set($pages = $doc.getObject('Collections.StaticCollectionClass').getProperty('pages').value)
+  {{html}}
+  &lt;label id="description" &gt;$msg.get('collections.viewCollection.descriptionLabel') &lt;/label&gt; 
+  {{/html}}
+
+  $doc.display('description')
+  (%class='hierarchymacrolist'%)(((
+  #foreach($page in $pages)
+    * [[$xwiki.getDocument($page).getDisplayTitle()&gt;&gt;$page]]
+  #end
+  )))
+  {{html}}
+  &lt;div id="collectionButtons"&gt;
+    &lt;form action="$xwiki.getURL("Collections.ExportColection","view")" method="get" class="collectionsForm"&gt;
+    &lt;input type="hidden" name="exportListDoc" value="$doc" /&gt;
+    &lt;span class="buttonwrapper"&gt;
+      &lt;input class="button" type="submit" value="$msg.get('collections.viewCollection.exportButton')"/&gt;
+    &lt;/span&gt;
+    &lt;/form&gt;
+    &lt;form action="$xwiki.getURL("$doc",'edit')" class="collectionsForm"&gt;
+    &lt;span class="buttonwrapper"&gt;
+      &lt;input class="button" type="submit" value="$msg.get('collections.viewCollection.editButton')"/&gt;
+    &lt;/span&gt;
+    &lt;/form&gt;
+    &lt;form action="$xwiki.getURL("Collections.WebHome")" class="collectionsForm"&gt;
+    &lt;span class="buttonwrapper"&gt;
+      &lt;input class="button" type="submit" value="$msg.get('collections.viewCollection.backButton')"/&gt;
+    &lt;/span&gt;
+    &lt;/form&gt;
+  &lt;/div&gt;
+  {{/html}}
+#elseif($context.action=="edit" &amp;&amp; $request.editMode != 'order')
+  #set($discard = $xwiki.ssx.use("Collections.StaticCollectionSheet"))
+  #set($pages = $doc.getObject('Collections.StaticCollectionClass').getProperty('pages').value)
+  #set($pagesParam ='')
+  #foreach($page in $pages)
+    #if($velocityCount &gt; 1)
+      #set($pagesParam = $pagesParam + ",")
+    #end
+    #set($pagesParam = $pagesParam + $page)
+  #end
+   {{html}}
+  &lt;dl&gt;
+      &lt;dt&gt;
+        &lt;label for="page"&gt;Title&lt;/label&gt;
+      &lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;input id="title" type="text" value="$doc.title" name="title"&gt;
+      &lt;/dd&gt;
+      &lt;dt&gt;
+        &lt;label for="Collections.StaticCollectionClass_0_description"&gt;Description&lt;/label&gt;
+      &lt;/dt&gt;
+      &lt;dd&gt;
+        &lt;textarea  id="Collections.StaticCollectionClass_0_description" cols="80" name="Collections.StaticCollectionClass_0_description"&gt;$doc.getObject('Collections.StaticCollectionClass').getProperty('description').value&lt;/textarea&gt;
+      &lt;/dd&gt;
+    &lt;/dl&gt;
+    &lt;br /&gt;
+  {{/html}}
+
+  {{info}}$msg.get('Collections.edit.currentList'){{/info}}
+
+  {{html}}
+    &lt;div class="customList"&gt;
+      #foreach($page in $pages)
+        &lt;div class="hierarchynode "&gt;
+        &lt;a href='$xwiki.getURL("$page")'&gt;
+          &lt;span class="documentlabel"&gt;$xwiki.getDocument("$page").getDisplayTitle()&lt;/span&gt;
+        &lt;/a&gt;
+        &lt;span class="checkboxcontrols"&gt;
+          &lt;input class="hierarchynodecheckbox" type="checkbox" checked="checked" value='$xwiki.getDocument("$page").fullName' name="Collections.StaticCollectionClass_0_pages"&gt;
+        &lt;/span&gt;
+        &lt;/div&gt;
+      #end
+    &lt;/div&gt;
+  {{/html}}
+
+  
+
+  {{info}}$msg.get('Collections.edit.addingNewElements'){{/info}}
+  
+  {{warning}}$msg.get('Collections.warning.noParent'){{/warning}}
+
+  {{hierarchy displayvalue="displayTitle" showcheckboxes="true" excludes="$pagesParam" excludespaces="XWiki" checkboxname ="Collections.StaticCollectionClass_0_pages"  /}}
+#elseif($context.action=="edit" &amp;&amp; $request.editMode == 'order')
+  #set($discard = $xwiki.ssx.use("Collections.EditOrderCollectionCSS"))
+  #set($pages = $doc.getObject('Collections.StaticCollectionClass').getProperty('pages').value)
+  #set($pagesParam ='')
+  #foreach($page in $pages)
+    #if($velocityCount &gt; 1)
+      #set($pagesParam = $pagesParam + ",")
+    #end
+    #set($pagesParam = $pagesParam + $page)
+  #end
+  {{info}}$msg.get('Collections.editOrder.info') {{/info}}
+
+  {{hierarchy displayvalue="displayTitle" doclist="$pagesParam" showcheckboxes="true"  checkboxname ="Collections.StaticCollectionClass_0_pages" checked="true" reorderable="true" /}}
+#end
+{{/velocity}}</content></xwikidoc>
