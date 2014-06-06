@@ -55,4 +55,40 @@ Collections.validation.noDescription=Description field is mandatory
 Collections.edit.addingNewElements=This list displays all documents that you can add at the end of the list.
 Collections.edit.currentList=This is the ordered list. You can uncheck a document to remove it from the list.
 Collections.warning.noParent=If you add a parent and one or more of its child, you will have to give attention to it/them during the reordering.
-</content></xwikidoc>
+</content>
+  <object>
+    <name>Collections.Translations</name>
+    <number>0</number>
+    <className>XWiki.TranslationDocumentClass</className>
+    <guid>8a112fb5-6bfd-4ff0-a3e2-6ab347c56061</guid>
+    <class>
+      <name>XWiki.TranslationDocumentClass</name>
+      <customClass/>
+      <customMapping/>
+      <defaultViewSheet/>
+      <defaultEditSheet/>
+      <defaultWeb/>
+      <nameField/>
+      <validationScript/>
+      <scope>
+        <cache>0</cache>
+        <disabled>0</disabled>
+        <displayType>select</displayType>
+        <multiSelect>0</multiSelect>
+        <name>scope</name>
+        <number>1</number>
+        <prettyName>Scope</prettyName>
+        <relationalStorage>0</relationalStorage>
+        <separator> </separator>
+        <separators> ,|</separators>
+        <size>1</size>
+        <unmodifiable>0</unmodifiable>
+        <values>GLOBAL|WIKI|USER|ON_DEMAND</values>
+        <classType>com.xpn.xwiki.objects.classes.StaticListClass</classType>
+      </scope>
+    </class>
+    <property>
+      <scope>WIKI</scope>
+    </property>
+  </object>
+</xwikidoc>
