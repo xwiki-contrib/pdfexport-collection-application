@@ -293,7 +293,7 @@ $xwiki.ssx.use("Collections.WebHomeSheet")
 #set($myColumns = ["doc.title", "description", "doc.creationDate", "doc.author", "collectionsExport", "collectionsEdit", "collectionsOrder", "_actions"])
 #set($columnsProperties = {
    "doc.title" : { "type" : "text", "link" : "view"},
-   "description" : { "type" : "text" , "size" : 20},
+   "description" : { "type" : "text" , "size" : 20, "html" : "true"},
    "doc.author" : { "type" : "text" },
    "collectionsExport" : { "type" : "text", "html" : "true", "sortable":"false", "filterable":"false" },
    "collectionsEdit" : { "type" : "text", "html" : "true", "sortable":"false", "filterable":"false" },
