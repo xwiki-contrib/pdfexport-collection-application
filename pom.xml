@@ -31,7 +31,7 @@
   <artifactId>pdfexport-collection-application</artifactId>
   <name>PDF Export Collection Application</name>
   <packaging>xar</packaging>
-  <version>1.2-SNAPSHOT</version>
+  <version>1.1-SNAPSHOT</version>
   <description>Application allowing to create and manage collections in order to export them to PDF.</description>
   <scm>
     <connection>scm:git:git://github.com:xwiki-contrib/pdfexport-collection-application.git</connection>
