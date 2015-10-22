@@ -53,6 +53,9 @@
       <url>http://nexus.xwiki.org/nexus/service/local/staging/deploy/maven2/</url>
     </repository>
   </distributionManagement>
+  <properties>
+    <xwiki.enforcer.skip>false</xwiki.enforcer.skip>
+  </properties>
   <dependencies>
      <dependency>
       <groupId>org.xwiki.contrib</groupId>
@@ -77,6 +80,14 @@
           <!-- Try releasing with release plugin 2.5 so that we can actually release with git 1.9
                (seems there are a log of bugs, especially http://jira.codehaus.org/browse/MRELEASE-812 ) -->
           <version>2.5</version>
+        </plugin>
+        <!-- FIXME: Remove this plugin configuration and the property definition when upgrading to a XWiki Commons version that already contains it -->
+        <plugin>
+          <groupId>org.apache.maven.plugins</groupId>
+          <artifactId>maven-enforcer-plugin</artifactId>
+          <configuration>
+            <skip>${xwiki.enforcer.skip}</skip>
+          </configuration>
         </plugin>
       </plugins>
     </pluginManagement>
